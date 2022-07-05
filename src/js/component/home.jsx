@@ -7,8 +7,9 @@ import React, {useState} from "react";
 //create your first component
 const Home = () => {
 	const [ color, setColor] = useState("red");
-	return (
-		<div className="traffic-light">
+	return (<div>
+		<div className="trafficTop"></div>
+		<div className="traffic-light container">
 			<div className={"light red " + (color == "red" ? "on" : "")} onClick={()=> {setColor('red')}}>
 
 			</div>
@@ -18,6 +19,7 @@ const Home = () => {
 			<div className={"light green " + (color == "green" ? "on" : "")}onClick={()=> {setColor('green')}}>
 
 			</div>
+		</div>
 		</div>
 	);
 };
